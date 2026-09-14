@@ -1,0 +1,11 @@
+Demo znak, neutralan i namerno jednostavan.
+Koristi se samo za favicon i ikonice na uredjajima.
+
+U zaglavlju sajta stoji tekstualni logo, jer na <a class="zaglavlje__logo">
+stoji atribut data-logo="tekst". Tako klijent odmah vidi gde ide njegov logo.
+
+Kad se radi sajt za klijenta:
+1. ovde se stavlja njegov logo (logo.svg, logo-uski.svg za uske ekrane)
+2. u zaglavlje se vraca blok <picture> sa te dve datoteke
+3. atribut se menja u data-logo="slika"
+4. favicon, apple-touch-icon i ikonice se prave iz njegovog znaka

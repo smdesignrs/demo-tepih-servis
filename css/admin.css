@@ -1,0 +1,237 @@
+/* =========================================================
+   Admin panel, spisak zahteva.
+   Dopuna na style.css: odatle dolaze pisma, boje i dugmad,
+   ovde je samo ono sto panel ima a sajt nema.
+   Pisano prvo za telefon, jer se odatle najvise koristi.
+   ========================================================= */
+
+.panel {
+  background: var(--boja-pozadina-alt3);
+  padding-bottom: 48px;
+}
+
+/* ---------- zaglavlje ---------- */
+
+.panel__zaglavlje {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--boja-pozadina);
+  border-bottom: 1px solid var(--boja-ivica);
+  padding: var(--razmak-3) var(--razmak-4) var(--razmak-2);
+}
+.panel__red {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--razmak-3);
+}
+.panel__naslov {
+  font-size: var(--font-lg);
+  font-weight: var(--debljina-crna);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.panel__desno { display: flex; align-items: center; gap: var(--razmak-2); }
+.panel__korisnik {
+  font-size: var(--font-xs);
+  color: var(--boja-tekst-prigusen);
+  max-width: 42vw;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.panel__osvezi {
+  width: var(--meta-visina); height: var(--meta-visina);
+  display: grid; place-items: center;
+  border: 1px solid var(--boja-ivica);
+  border-radius: var(--radijus-sm);
+  background: var(--boja-pozadina);
+  color: var(--boja-primarna);
+  cursor: pointer; flex: none;
+}
+.panel__osvezi[aria-busy="true"] { opacity: .5; cursor: default; }
+
+.panel__upozorenje {
+  margin: var(--razmak-3) 0 0;
+  padding: var(--razmak-3);
+  border: 1px solid var(--boja-greska);
+  border-left-width: 4px;
+  border-radius: var(--radijus-sm);
+  background: #FCEFED;
+  color: var(--boja-greska);
+  font-size: var(--font-sm);
+  line-height: 1.45;
+}
+.panel__upozorenje code { font-size: .95em; }
+
+.panel__alati { margin-top: var(--razmak-3); }
+.panel__trazi input {
+  width: 100%;
+  min-height: var(--meta-visina);
+  padding: 0 14px;
+  border: 1px solid var(--boja-ivica);
+  border-radius: var(--radijus-sm);
+  background: var(--boja-pozadina);
+}
+
+/* Filteri se pomeraju levo i desno, da na telefonu ne zauzmu pola ekrana. */
+.panel__filteri {
+  display: flex; gap: var(--razmak-2);
+  margin-top: var(--razmak-3);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.panel__filteri::-webkit-scrollbar { display: none; }
+.panel__filter {
+  flex: none;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--boja-ivica);
+  border-radius: var(--radijus-pun);
+  background: var(--boja-pozadina);
+  color: var(--boja-tekst);
+  font-size: var(--font-sm);
+  font-weight: var(--debljina-polu);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.panel__filter[aria-pressed="true"] {
+  background: var(--boja-primarna);
+  border-color: var(--boja-primarna);
+  color: var(--boja-tekst-na-tamnom);
+}
+.panel__filter em { font-style: normal; opacity: .7; margin-left: 6px; }
+
+/* ---------- spisak ---------- */
+
+.panel__sadrzaj { padding: var(--razmak-4); }
+.panel__stanje {
+  text-align: center;
+  color: var(--boja-tekst-prigusen);
+  padding: var(--razmak-8) 0;
+  margin: 0;
+}
+.panel__spisak { display: grid; gap: var(--razmak-3); }
+
+.zahtev {
+  background: var(--boja-pozadina);
+  border: 1px solid var(--boja-ivica);
+  border-radius: var(--radijus-md);
+  overflow: hidden;
+}
+.zahtev--nov { border-left: 4px solid var(--boja-akcija-tamna); }
+
+.zahtev__vrh {
+  width: 100%;
+  display: grid; gap: 6px;
+  padding: var(--razmak-4);
+  border: 0; background: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit; color: inherit;
+}
+.zahtev__glava {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--razmak-3);
+}
+.zahtev__ime {
+  font-family: var(--font-naslovi);
+  font-weight: var(--debljina-crna);
+  font-size: var(--font-md);
+}
+.zahtev__meta {
+  display: flex; flex-wrap: wrap; gap: 4px var(--razmak-3);
+  font-size: var(--font-sm);
+  color: var(--boja-tekst-prigusen);
+}
+
+.oznaka-status {
+  flex: none;
+  padding: 3px 10px;
+  border-radius: var(--radijus-pun);
+  font-size: var(--font-xs);
+  font-weight: var(--debljina-bold);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: var(--boja-pozadina-alt2);
+  color: var(--boja-primarna);
+}
+/* Boje prate tok posla: nov trazi akciju, u toku je plavo,
+   gotovo je zeleno, otkazano je prigusen. */
+.oznaka-status[data-status="nov"]       { background: var(--boja-akcija-tamna); color: #fff; }
+.oznaka-status[data-status="pozvan"],
+.oznaka-status[data-status="zakazan"]   { background: var(--boja-istaknuto-bleda); color: var(--boja-istaknuto-tekst); }
+.oznaka-status[data-status="preuzet"],
+.oznaka-status[data-status="u obradi"],
+.oznaka-status[data-status="spreman"]   { background: var(--boja-pozadina-alt2); color: var(--boja-primarna); }
+.oznaka-status[data-status="isporucen"],
+.oznaka-status[data-status="naplacen"]  { background: var(--boja-primarna); color: #fff; }
+.oznaka-status[data-status="otkazan"]   { background: #EFEFEF; color: #6B6B6B; }
+
+/* ---------- otvoren zahtev ---------- */
+
+.zahtev__telo {
+  padding: 0 var(--razmak-4) var(--razmak-4);
+  border-top: 1px solid var(--boja-ivica);
+}
+.zahtev__podaci {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--razmak-2) var(--razmak-4);
+  margin: var(--razmak-4) 0;
+  font-size: var(--font-sm);
+}
+.zahtev__podaci dt {
+  color: var(--boja-tekst-prigusen);
+  white-space: nowrap;
+}
+.zahtev__podaci dd { margin: 0; }
+.zahtev__podaci a { text-decoration: underline; font-weight: var(--debljina-polu); }
+
+.zahtev__forma { display: grid; gap: var(--razmak-3); }
+.zahtev__polje { display: grid; gap: 4px; }
+.zahtev__polje > span {
+  font-size: var(--font-xs);
+  font-weight: var(--debljina-polu);
+  color: var(--boja-tekst-prigusen);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.zahtev__polje select,
+.zahtev__polje input,
+.zahtev__polje textarea {
+  width: 100%;
+  min-height: var(--meta-visina);
+  padding: 10px 12px;
+  border: 1px solid var(--boja-ivica);
+  border-radius: var(--radijus-sm);
+  background: var(--boja-pozadina);
+  color: var(--boja-tekst);
+}
+.zahtev__polje textarea { min-height: 64px; resize: vertical; }
+.zahtev__cene { display: grid; grid-template-columns: 1fr 1fr; gap: var(--razmak-3); }
+
+.zahtev__akcije {
+  display: flex; align-items: center; gap: var(--razmak-3);
+  flex-wrap: wrap;
+}
+.zahtev__poruka {
+  font-size: var(--font-sm);
+  font-weight: var(--debljina-polu);
+  color: var(--boja-akcija-tamna);
+}
+.zahtev__poruka[data-vrsta="greska"] { color: var(--boja-greska); }
+
+/* ---------- sire od telefona ---------- */
+
+@media (min-width: 640px) {
+  .panel__zaglavlje { padding-inline: var(--razmak-6); }
+  .panel__sadrzaj { padding: var(--razmak-6); max-width: 900px; margin-inline: auto; }
+  .panel__korisnik { max-width: none; }
+  .zahtev__podaci { grid-template-columns: 150px 1fr; }
+}
+
+/* Demo napomena umesto upozorenja da panel nije zakljucan. */
+.panel__upozorenje--demo {
+  border-color: var(--boja-ivica);
+  border-left-color: var(--boja-primarna);
+  background: var(--boja-pozadina-alt3);
+  color: var(--boja-tekst);
+}

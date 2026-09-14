@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahtevi (demo) | Tepih Servis Alfa</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#123A6B">
+
+<link rel="preload" href="/fontovi/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fontovi/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css?v=2026-09-14">
+<link rel="stylesheet" href="/css/admin.css?v=2026-09-14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+</head>
+<body class="panel">
+
+<header class="panel__zaglavlje">
+  <div class="panel__red">
+    <h1 class="panel__naslov">Zahtevi</h1>
+    <div class="panel__desno">
+      <span class="panel__korisnik" id="korisnik"></span>
+      <button class="panel__osvezi" type="button" id="osvezi" aria-label="Osveži spisak">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <p class="panel__upozorenje panel__upozorenje--demo">
+    <strong>Demo prikaz.</strong> Zahtevi ispod su izmišljeni i žive samo u
+    pretraživaču. Izmene rade, ali se gube kad osvežite stranu. Na pravom sajtu
+    panel čita iz baze i zaključan je prijavom preko koda koji stiže na mejl.
+  </p>
+
+  <div class="panel__alati">
+    <label class="panel__trazi">
+      <span class="samo-citac">Pretraga po imenu, telefonu ili adresi</span>
+      <input type="search" id="trazi" placeholder="Ime, telefon ili adresa" autocomplete="off">
+    </label>
+  </div>
+
+  <div class="panel__filteri" id="filteri" role="group" aria-label="Filter po statusu"></div>
+</header>
+
+<main class="panel__sadrzaj">
+  <p class="panel__stanje" id="stanje">Učitavanje...</p>
+  <ul class="panel__spisak" id="spisak"></ul>
+</main>
+
+<!-- Obrazac jednog zahteva. Popunjava se iz JavaScripta pri otvaranju. -->
+<template id="predlozak-zahteva">
+  <li class="zahtev">
+    <button class="zahtev__vrh" type="button" aria-expanded="false">
+      <span class="zahtev__glava">
+        <span class="zahtev__ime"></span>
+        <span class="oznaka-status"></span>
+      </span>
+      <span class="zahtev__meta">
+        <span class="zahtev__stiglo"></span>
+        <span class="zahtev__usluge"></span>
+      </span>
+    </button>
+
+    <div class="zahtev__telo" hidden>
+      <dl class="zahtev__podaci">
+        <dt>Telefon</dt>
+        <dd><a class="zahtev__telefon" href="#"></a></dd>
+
+        <dt>Adresa</dt>
+        <dd><a class="zahtev__adresa" href="#" target="_blank" rel="noopener"></a></dd>
+
+        <dt>Željeni termin</dt>
+        <dd class="zahtev__termin"></dd>
+
+        <dt>Usluge</dt>
+        <dd class="zahtev__usluge-pun"></dd>
+
+        <dt class="zahtev__napomena-oznaka">Napomena klijenta</dt>
+        <dd class="zahtev__napomena"></dd>
+      </dl>
+
+      <form class="zahtev__forma">
+        <!-- Polje je uvek unutar svoje oznake. Obrazac se umnozava za svaki
+             zahtev, pa se veza preko id-ja ne moze koristiti: id-jevi bi se
+             ponavljali i citac ekrana bi citao pogresnu oznaku. -->
+        <label class="zahtev__polje">
+          <span>Status</span>
+          <select class="zahtev__status"></select>
+        </label>
+
+        <div class="zahtev__cene">
+          <label class="zahtev__polje">
+            <span>Procena, din</span>
+            <input class="zahtev__procena" type="text" inputmode="decimal" autocomplete="off">
+          </label>
+          <label class="zahtev__polje">
+            <span>Naplaćeno, din</span>
+            <input class="zahtev__konacna" type="text" inputmode="decimal" autocomplete="off">
+          </label>
+        </div>
+
+        <label class="zahtev__polje">
+          <span>Interna beleška</span>
+          <textarea class="zahtev__beleska" rows="2" placeholder="Vidi samo ekipa, ne klijent"></textarea>
+        </label>
+
+        <div class="zahtev__akcije">
+          <button class="dugme dugme--primarno zahtev__sacuvaj" type="submit">Sačuvaj</button>
+          <span class="zahtev__poruka" role="status"></span>
+        </div>
+      </form>
+    </div>
+  </li>
+</template>
+
+<script src="/js/admin.js?v=2026-09-14" defer></script>
+</body>
+</html>

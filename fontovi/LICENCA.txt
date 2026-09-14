@@ -1,0 +1,20 @@
+FONTOVI NA OVOM SAJTU
+=====================
+
+Manrope
+  Autor: Mikhail Sharanda
+  Licenca: SIL Open Font License 1.1
+  https://github.com/sharanda/manrope
+
+Source Sans 3
+  Autor: Paul D. Hunt, Adobe
+  Licenca: SIL Open Font License 1.1
+  https://github.com/adobe-fonts/source-sans
+
+Obe licence dozvoljavaju slobodno koriscenje, ugradnju i menjanje,
+ukljucujuci komercijalnu upotrebu i pravljenje podskupova.
+
+Fajlovi u ovom folderu su podskupovi originalnih fontova, smanjeni na
+znakove koje sajt koristi (osnovna latinica, Latin Extended-A sa
+c c z s dj, i interpunkcija). Napravljeni preko fonttools-a iz
+@fontsource paketa sa npm-a, 10.09.2026.

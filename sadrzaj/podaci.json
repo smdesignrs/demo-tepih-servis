@@ -1,0 +1,664 @@
+{
+  "_uputstvo": "DEMO. Jedini izvor istine za sadrzaj. Sve sto se menja na sajtu menja se PRVO ovde, pa na svakom mestu u HTML-u koje nosi marker <!-- p:putanja -->. Polja koja pocinju sa _ su napomene i ne idu na sajt. Svi podaci u ovom fajlu su izmisljeni, radi prikaza.",
+  "sajt": {
+    "domen": "https://demo-tepih-servis.pages.dev",
+    "nazivSajta": "Tepih Servis Alfa",
+    "jezik": "sr_RS",
+    "bojaTeme": "#123A6B",
+    "ogPodrazumevana": "/og-podrazumevana.jpg",
+    "_domen": "demo adresa. Kad se pravi sajt za klijenta, ovde ide njegov domen."
+  },
+  "boje": {
+    "plava": "#123A6B",
+    "plavaTamna": "#0E2F58",
+    "zelena": "#3FA34D",
+    "zelenaTamna": "#2E7D39",
+    "svetloPlava": "#EAF4FB",
+    "svetloPlava2": "#E6F0F9",
+    "svetloPlava3": "#F0F6FC",
+    "ivica": "#D6E6F5",
+    "tekstPrigusen": "#5A6472",
+    "zlatna": "#D9AE4E",
+    "zlatnaTamna": "#C79A31",
+    "zlatnaSvetla": "#E8C878",
+    "zlatnaTekst": "#4A3506",
+    "bela": "#FFFFFF",
+    "zelenaTamnija": "#26682F",
+    "zvezde": "#BE8200",
+    "greska": "#7A1F16",
+    "_kontrast": "zelena #3FA34D je samo ukrasna. Gde ide beli tekst na zelenom ili zeleni tekst na belom koristi se zelenaTamna, jer svetla daje 3.2 prema beloj, a WCAG AA trazi 4.5.",
+    "zelenaBleda": "#C9F3CE"
+  },
+  "tipografija": {
+    "naslovi": "Manrope",
+    "telo": "Source Sans 3",
+    "_podskup": "obavezno latin-ext, inače nema c c z s dj"
+  },
+  "logo": {
+    "_demo": "U demou se logo ne prikazuje kao slika, nego kao tekst, da klijent vidi gde ide njegov. Kad se radi njegov sajt, ovde se upisuju putanje do njegovih datoteka i u zaglavlju se vraca blok <picture>, a atribut se menja u data-logo=\"slika\".",
+    "znak": "/slike/logo/znak.svg",
+    "vodoravni": "",
+    "vodoravniBeli": "",
+    "uski": "",
+    "uskiBeli": ""
+  },
+  "firma": {
+    "naziv": "Tepih Servis Alfa",
+    "nazivKratko": "SERVIS ALFA",
+    "pravniNaziv": "",
+    "pib": "",
+    "maticniBroj": "",
+    "telefon": "+381600000000",
+    "telefonPrikaz": "0600000000",
+    "telefonPrikazRazmaknuto": "060 000 0000",
+    "emailInterni": "",
+    "emailJavni": "kontakt@example.com",
+    "ulica": "Primer ulica 1",
+    "grad": "Beograd",
+    "postanskiBroj": "11000",
+    "drzava": "RS",
+    "adresaPrikaz": "Primer ulica 1, 11000 Beograd",
+    "geo": {
+      "lat": 44.8125,
+      "lon": 20.4612
+    },
+    "radnoVreme": [
+      {
+        "dani": [
+          "Mo",
+          "Tu",
+          "We",
+          "Th",
+          "Fr",
+          "Sa",
+          "Su"
+        ],
+        "od": "08:00",
+        "do": "20:00"
+      }
+    ],
+    "radnoVremePrikaz": "Svaki dan od 08h do 20h",
+    "cenovniRang": "$$",
+    "podrucjeRada": "Beograd i okolina",
+    "teritorija": [
+      "Beograd",
+      "Novi Beograd",
+      "Zemun",
+      "Vračar",
+      "Voždovac",
+      "Zvezdara",
+      "Čukarica",
+      "Palilula",
+      "Rakovica",
+      "Savski venac",
+      "Stari grad",
+      "Surčin",
+      "Borča",
+      "Batajnica"
+    ],
+    "profili": [],
+    "_profili": "nema društvenih mreža. Kad ih bude, puni linkovi ovde, oni pune sameAs u schemi",
+    "_demo": "Svi podaci o firmi su izmisljeni. Telefon 060 000 0000 i adresa Primer ulica 1 ne postoje. Zamenjuju se pravim podacima kad se radi sajt za klijenta."
+  },
+  "strane": {
+    "index": {
+      "putanja": "/",
+      "title": "Pranje tepiha Beograd | Tepih Servis Alfa",
+      "opis": "Dubinsko pranje tepiha, staza i itisona. Sušenje u komori, tepih izlazi potpuno suv. Besplatno preuzimanje i dostava. Demo prikaz sajta za tepih servise.",
+      "ogSlika": "/og-podrazumevana.jpg",
+      "ogOpisSlike": "Tepih Servis Alfa, dubinsko pranje i sušenje tepiha u komori",
+      "indeksiraj": false,
+      "_title": "u dizajnu je title bio 92 znaka, skraćen na 52 po standardu (50-60)"
+    },
+    "hvala": {
+      "putanja": "/hvala",
+      "title": "Zahtev je primljen | Tepih Servis Alfa",
+      "opis": "Vaš zahtev za preuzimanje tepiha je primljen. Javljamo se telefonom radi potvrde termina.",
+      "ogSlika": "/og-podrazumevana.jpg",
+      "ogOpisSlike": "",
+      "indeksiraj": false
+    },
+    "politika": {
+      "putanja": "/politika-privatnosti",
+      "title": "Politika privatnosti | Tepih Servis Alfa",
+      "opis": "Koje podatke prikupljamo kroz formu za zakazivanje, zašto ih prikupljamo, koliko dugo ih čuvamo i koja prava imate. Tepih Servis Alfa, Beograd.",
+      "ogSlika": "/slike/og/og-podrazumevana.jpg",
+      "ogOpisSlike": "Tepih Servis Alfa, dubinsko pranje i sušenje tepiha u komori",
+      "indeksiraj": false
+    }
+  },
+  "hero": {
+    "nadnaslov": "SERVIS TEPIHA U BEOGRADU",
+    "naslov": "Dubinsko pranje i sušenje tepiha u komori",
+    "podnaslov": "Besplatno preuzimanje i dostava na kućnu adresu. Tepih vraćamo potpuno suv, bez vlage i ustajalog mirisa.",
+    "dugmePrimarno": "POZOVITE 0600000000",
+    "dugmeSekundarno": "ZAKAŽITE PREUZIMANJE",
+    "slika": "slike/hero/hero.avif",
+    "opisSlike": "Pogon servisa za dubinsko pranje tepiha",
+    "preklop": "rgba(18, 58, 107, 0.78)"
+  },
+  "oNama": {
+    "naslovSekcije": "O nama",
+    "naslov": "Vaš saveznik za čist, zdrav i osvežen dom.",
+    "pasusi": [
+      "Već godinama se brinemo o čistoći vaših tepiha, nameštaja i vozila. Naša misija nije samo da uklonimo vidljive mrlje, već da eliminišemo alergene, grinje i neprijatne mirise koji se talože duboko u tkaninama.",
+      "Koristimo najsavremeniju opremu i proverene tehnike kako bismo vašem prostoru vratili higijenu i svežinu, uz maksimalnu pažnju prema svakom komadu koji nam poverite."
+    ],
+    "dugme": "Zakažite odmah",
+    "slika": "slike/o-nama/ekipa.avif",
+    "opisSlike": "Ekipa servisa Tepih Servis Alfa pored opreme za dubinsko pranje"
+  },
+  "usluge": {
+    "naslovSekcije": "Naše usluge",
+    "podnaslov": "Izaberite uslugu po vašoj meri i uverite se zašto nam stotine zadovoljnih klijenata ukazuju poverenje.",
+    "stavke": [
+      {
+        "id": "masinsko-pranje-tepiha",
+        "oznaka": "Tepisi i itisoni",
+        "naziv": "Mašinsko pranje tepiha",
+        "opis": "Detaljno trešenje, dubinsko pranje i ispiranje najsavremenijim mašinama. Uklanjamo tvrdokorne mrlje i dubinsku prljavštinu uz očuvanje teksture i boja vašeg tepiha.",
+        "cenaPrikaz": "od 300 RSD/m2",
+        "slika": "slike/usluge/masinsko-pranje-tepiha.avif",
+        "opisSlike": "Mašinsko dubinsko pranje tepiha"
+      },
+      {
+        "id": "dubinsko-pranje-namestaja",
+        "oznaka": "Nameštaj",
+        "naziv": "Dubinsko pranje nameštaja",
+        "opis": "Tretman ekstrakcijom za garniture, dušeke, fotelje i stolice. Prodiremo duboko u materijal, neutrališemo mirise i izvlačimo nakupljene alergene i prašinu.",
+        "cenaPrikaz": "od 400 RSD/kom",
+        "slika": "slike/usluge/dubinsko-pranje-namestaja.avif",
+        "opisSlike": "Dubinsko pranje garniture ekstrakcijom"
+      },
+      {
+        "id": "dubinsko-pranje-vozila",
+        "oznaka": "Vozila",
+        "naziv": "Dubinsko pranje vozila",
+        "opis": "Kompletno čišćenje enterijera automobila, od sedišta i patosnica do prtljažnika. Uklanjamo sve tragove svakodnevne upotrebe i ostavljamo enterijer mirišljavim i osveženim.",
+        "cenaPrikaz": "od 4000 RSD",
+        "slika": "slike/usluge/dubinsko-pranje-vozila.avif",
+        "opisSlike": "Dubinsko pranje enterijera automobila"
+      },
+      {
+        "id": "bebi-program",
+        "oznaka": "Za najmlađe",
+        "naziv": "Bebi program",
+        "opis": "Kompletan dečji program za decu do 3 godine kod nas je potpuno besplatan.",
+        "cenaPrikaz": "BESPLATNO",
+        "slika": "slike/usluge/bebi-program.avif",
+        "opisSlike": "Očišćeni dečji tepih i igračke"
+      }
+    ]
+  },
+  "garancija": {
+    "naslov": "100% garancija zadovoljstva",
+    "tekst": "Ukoliko niste potpuno zadovoljni rezultatom radimo ponovo pranje bez naknadnih troškova.",
+    "ikonica": "slike/ikonice/garancija.svg"
+  },
+  "prednosti": [
+    {
+      "id": "preuzimanje",
+      "naziv": "Besplatno preuzimanje",
+      "opis": "I dostava na adresu",
+      "ikonica": "slike/ikonice/preuzimanje.svg"
+    },
+    {
+      "id": "komora",
+      "naziv": "Sušenje u komori",
+      "opis": "Bez vlage i ustajalog mirisa",
+      "ikonica": "slike/ikonice/komora.svg"
+    },
+    {
+      "id": "sredstva",
+      "naziv": "Ekološka sredstva",
+      "opis": "Pogodno za decu i ljubimce",
+      "ikonica": "slike/ikonice/sredstva.svg"
+    },
+    {
+      "id": "dezinfekcija",
+      "naziv": "Dezinfekcija",
+      "opis": "Eliminisanje grinja i bakterija",
+      "ikonica": "slike/ikonice/dezinfekcija.svg"
+    }
+  ],
+  "galerija": {
+    "naslovSekcije": "Naša galerija",
+    "podnaslov": "Naši rezultati govore sami za sebe",
+    "_vazno": "Ove slike se prikazuju kao stvarni radovi firme. Idu iskljucivo prave fotografije, ne generisane.",
+    "slike": [
+      {
+        "id": "galerija-1",
+        "putanja": "slike/galerija/slika-1.avif",
+        "opis": "",
+        "slot": "veliki, 568x356"
+      },
+      {
+        "id": "galerija-2",
+        "putanja": "slike/galerija/slika-2.avif",
+        "opis": "",
+        "slot": "siroki, 568x170"
+      },
+      {
+        "id": "galerija-3",
+        "putanja": "slike/galerija/slika-3.avif",
+        "opis": "",
+        "slot": "mali, 276x170"
+      },
+      {
+        "id": "galerija-4",
+        "putanja": "slike/galerija/slika-4.avif",
+        "opis": "",
+        "slot": "mali, 276x170"
+      },
+      {
+        "id": "galerija-5",
+        "putanja": "slike/galerija/slika-5.avif",
+        "opis": "",
+        "slot": "mali, 276x170"
+      },
+      {
+        "id": "galerija-6",
+        "putanja": "slike/galerija/slika-6.avif",
+        "opis": "",
+        "slot": "panorama, 860x170"
+      }
+    ]
+  },
+  "koraci": {
+    "naslovSekcije": "Kako funkcionise",
+    "stavke": [
+      {
+        "broj": 1,
+        "naziv": "Zakažete termin",
+        "opis": "Pozivom ili preko forme. Termin potvrđujemo istog dana."
+      },
+      {
+        "broj": 2,
+        "naziv": "Dolazimo po tepih",
+        "opis": "Besplatno preuzimanje sa kućne adrese u dogovorenom terminu."
+      },
+      {
+        "broj": 3,
+        "naziv": "Peremo i sušimo u komori",
+        "opis": "Dubinsko pranje, pa kontrolisano sušenje do nulte vlage."
+      },
+      {
+        "broj": 4,
+        "naziv": "Vraćamo suv i spakovan",
+        "opis": "Dostava na vašu adresu u roku od 2-3 dana."
+      }
+    ]
+  },
+  "komora": {
+    "naslovSekcije": "Zašto komora",
+    "uvod": "Klasično sušenje na vazduhu ostavlja vlagu duboko u osnovi tepiha, odatle ustajali miris, buđ i deformisana vlakna. U komori se temperatura i strujanje vazduha kontrolišu, pa tepih izlazi suv do poslednjeg sloja.",
+    "prednosti": [
+      "Bez vlage u vlaknima i u osnovi tepiha",
+      "Bez ustajalog mirisa i bez buđi",
+      "Kraći rok, tepih se suši brže",
+      "Tepih ne gubi oblik ni dimenzije"
+    ],
+    "poredjenje": {
+      "naslov": "Komora naspram sušenja na vazduhu",
+      "redovi": [
+        {
+          "komora": "Komora: suv za 24h",
+          "vazduh": "Vazduh: 3-7 dana"
+        },
+        {
+          "komora": "Komora: bez zaostale vlage",
+          "vazduh": "Vazduh: vlaga u osnovi"
+        },
+        {
+          "komora": "Komora: bez ustajalog mirisa",
+          "vazduh": "Vazduh: ustajao miris"
+        },
+        {
+          "komora": "Komora: kontrolisano sušenje",
+          "vazduh": "Vazduh: tepih gori na suncu"
+        }
+      ]
+    }
+  },
+  "recenzije": {
+    "naslovSekcije": "Klijenti kažu",
+    "podnaslov": "Prikazane recenzije su primer sadržaja, na pravom sajtu stoje recenzije klijenta.",
+    "stavke": [
+      {
+        "ime": "Marko M.",
+        "mesto": "Vračar",
+        "ocena": 5,
+        "tekst": "Tepisi su se vratili kao novi, bez mirisa i potpuno suvi. Preuzeli su ih ujutru i vratili treći dan."
+      },
+      {
+        "ime": "Jelena P.",
+        "mesto": "Novi Beograd",
+        "ocena": 5,
+        "tekst": "Došli su po tepihe u dogovoreno vreme i javili kad kreću nazad. Fleka od soka je nestala."
+      },
+      {
+        "ime": "Nenad S.",
+        "mesto": "Zemun",
+        "ocena": 5,
+        "tekst": "Prvi put da mi neko iznese i vrati tepih uz stepenice. Cena tačno kakvu su rekli na telefon."
+      }
+    ],
+    "_schema": "U demou se AggregateRating NE stavlja u schemu, jer recenzije nisu stvarne."
+  },
+  "cenovnik": {
+    "naslovSekcije": "Cene",
+    "napomena": "Preuzimanje i dostava su uvek besplatni. Konačnu cenu potvrđujemo pri preuzimanju, pre pranja.",
+    "grupe": [
+      {
+        "id": "tepisi",
+        "naziv": "Tepisi",
+        "stavke": [
+          {
+            "naziv": "Standard",
+            "podnaslov": "Sintetički tepisi i staze",
+            "cena": "od 350 din",
+            "jedinica": "/m2",
+            "ukljuceno": [
+              "Trešenje tepiha",
+              "Dubinsko mašinsko pranje",
+              "Sušenje u komori"
+            ]
+          },
+          {
+            "naziv": "Osetljivo",
+            "podnaslov": "Vuna, svila, ručni rad",
+            "cena": "od 450 din",
+            "jedinica": "/m2",
+            "ukljuceno": [
+              "Poseban program pranja",
+              "Blaža sredstva i niža temperatura",
+              "Cena po pregledu tepiha"
+            ]
+          },
+          {
+            "naziv": "Itisoni",
+            "podnaslov": "Kancelarijski itisoni",
+            "cena": "od 300 din",
+            "jedinica": "/m2",
+            "ukljuceno": [
+              "Pranje direktno na licu mesta",
+              "Korišćenje odmah nakon tretmana",
+              "Zaštita vlakana posle pranja"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "namestaj",
+        "naziv": "Nameštaj",
+        "stavke": [
+          {
+            "naziv": "Garnitura",
+            "podnaslov": "TDF ili ugaona garnitura",
+            "cena": "od 4000 din",
+            "jedinica": "",
+            "ukljuceno": [
+              "Pranje na vašoj adresi",
+              "Dubinsko pranje",
+              "Uklanjanje neprijatnih mirisa"
+            ]
+          },
+          {
+            "naziv": "Stolice",
+            "podnaslov": "Taburei, stolice i manje fotelje",
+            "cena": "od 400 din",
+            "jedinica": "/kom",
+            "ukljuceno": [
+              "Pranje na vašoj adresi",
+              "Dubinsko pranje",
+              "Uklanjanje neprijatnih mirisa"
+            ]
+          },
+          {
+            "naziv": "Dušeci",
+            "podnaslov": "Sve dimenzije",
+            "cena": "od 2500 din",
+            "jedinica": "/kom",
+            "ukljuceno": [
+              "Uklanjanje grinja i alergena",
+              "Dezinfekcija",
+              "Brzo sušenje"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vozila",
+        "naziv": "Vozila",
+        "stavke": [
+          {
+            "naziv": "Osnovni",
+            "podnaslov": "Auto sedišta",
+            "cena": "od 4000 din",
+            "jedinica": "",
+            "ukljuceno": [
+              "Dubinsko pranje sedišta",
+              "Bez zaostale vlage",
+              "Uklanjanje neprijatnih mirisa"
+            ]
+          },
+          {
+            "naziv": "Standard",
+            "podnaslov": "Auto sedišta, pod i patosnice",
+            "cena": "od 6000 din",
+            "jedinica": "",
+            "ukljuceno": [
+              "Dubinsko pranje sedišta",
+              "Dubinsko pranje podova i patosnica",
+              "Dubinsko pranje prtljažnika"
+            ]
+          },
+          {
+            "naziv": "Premium",
+            "podnaslov": "Kompletan enterijer vozila sem neba",
+            "cena": "od 9000 din",
+            "jedinica": "",
+            "ukljuceno": [
+              "Sve iz paketa Standard",
+              "Dubinsko pranje tapacira",
+              "Osvežavanje svih plastika"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bebi-program",
+        "naziv": "Bebi program",
+        "stavke": [
+          {
+            "naziv": "Bebi program",
+            "podnaslov": "Za decu do 3 godine",
+            "cena": "BESPLATNO",
+            "jedinica": "",
+            "ukljuceno": [
+              "Sredstva bez agresivne hemije",
+              "Uklanjanje grinja i alergena",
+              "Sušenje u komori",
+              "Besplatno preuzimanje i dostava"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "preIPosle": {
+    "_vazno": "Prikazuje se kao dokaz stvarnog rada. Idu iskljucivo prave fotografije, isti tepih, isti kadar, isto svetlo, iste dimenzije.",
+    "labelaPre": "Pre",
+    "labelaPosle": "Posle",
+    "pre": {
+      "putanja": "slike/pre-posle/pre.avif",
+      "opis": "Tepih pre dubinskog pranja"
+    },
+    "posle": {
+      "putanja": "slike/pre-posle/posle.avif",
+      "opis": "Isti tepih posle dubinskog pranja i sušenja u komori"
+    }
+  },
+  "forma": {
+    "naslov": "Zakažite termin",
+    "uvod": "Popunite formu, javljamo se telefonom radi potvrde termina, obicno u roku od jednog sata u toku radnog vremena.",
+    "dugme": "ZAKAŽI PREUZIMANJE",
+    "ispodDugmeta": "Ne odgovara ti forma? Pozovi nas na 0600000000",
+    "polja": {
+      "ime": {
+        "labela": "Ime i prezime *",
+        "primer": "npr. Marija Petrović",
+        "greska": "Unesite ime i prezime.",
+        "autocomplete": "name"
+      },
+      "telefon": {
+        "labela": "Broj telefona *",
+        "primer": "06x xxx xxxx",
+        "greska": "Unesite ispravan broj telefona.",
+        "autocomplete": "tel",
+        "inputmode": "tel"
+      },
+      "adresa": {
+        "labela": "Adresa za preuzimanje *",
+        "primer": "Ulica i broj, deo grada",
+        "greska": "Unesite adresu za preuzimanje.",
+        "autocomplete": "street-address"
+      },
+      "usluge": {
+        "labela": "Usluga *",
+        "dodatak": "(mozete izabrati vise)",
+        "greska": "Izaberite najmanje jednu uslugu."
+      },
+      "datum": {
+        "labela": "Željeni datum"
+      },
+      "termin": {
+        "labela": "Željeni termin"
+      },
+      "napomena": {
+        "labela": "Napomena",
+        "primer": "Fleke, materijal tepiha, sprat bez lifta..."
+      },
+      "saglasnost": {
+        "labela": "Saglasan sam sa obradom podataka radi zakazivanja, u skladu sa politikom privatnosti.",
+        "greska": "Potrebna je saglasnost sa politikom privatnosti."
+      }
+    },
+    "usluge": [
+      {
+        "id": "masinsko-pranje-tepiha",
+        "naziv": "Mašinsko pranje tepiha"
+      },
+      {
+        "id": "dubinsko-pranje-namestaja",
+        "naziv": "Dubinsko pranje nameštaja"
+      },
+      {
+        "id": "dubinsko-pranje-vozila",
+        "naziv": "Dubinsko pranje vozila"
+      },
+      {
+        "id": "bebi-program",
+        "naziv": "Bebi program",
+        "oznaka": "BESPLATNO"
+      }
+    ],
+    "termini": [
+      {
+        "id": "bilo-koji",
+        "naziv": "Bilo koji termin"
+      },
+      {
+        "id": "08-12",
+        "naziv": "08h - 12h"
+      },
+      {
+        "id": "12-16",
+        "naziv": "12h - 16h"
+      },
+      {
+        "id": "16-20",
+        "naziv": "16h - 20h"
+      }
+    ],
+    "potvrda": {
+      "naslov": "Zahtev je poslat",
+      "tekst": "Hvala! Kontaktiramo vas na broj koji ste ostavili radi potvrde termina preuzimanja.",
+      "poziv": "Ili nas pozovite: 060 000 0000",
+      "dugme": "Pošalji jos jedan zahtev"
+    },
+    "statusi": [
+      "nov",
+      "pozvan",
+      "zakazan",
+      "preuzet",
+      "u obradi",
+      "spreman",
+      "isporucen",
+      "naplacen",
+      "otkazan"
+    ],
+    "_termini": "izmenjeno 11.09.2026, cetiri termina po dva sata umesto prepodne/popodne. Vrednosti id-jeva su i u TERMINI_DOZVOLJENI u functions/api/zahtev.js i u IMENA_TERMINA u js/admin.js i u zahtev.js"
+  },
+  "pitanja": {
+    "naslovSekcije": "Česta pitanja",
+    "stavke": [
+      {
+        "pitanje": "Koliko traje pranje tepiha?",
+        "odgovor": "Standardni rok je 2-3 dana od preuzimanja. U sezoni može biti dan duže, tačan rok potvrđujemo kada preuzmemo tepih."
+      },
+      {
+        "pitanje": "Da li dolazite u moj deo grada?",
+        "odgovor": "Pokrivamo Beograd i okolinu: Novi Beograd, Zemun, Vračar, Voždovac, Zvezdara, Čukarica, Palilula, Rakovica, Savski venac, Stari grad, Surčin, Borča, Batajnica. Ako niste sigurni za vašu adresu, pozovite nas i odmah ćemo vam reći."
+      },
+      {
+        "pitanje": "Kako se plaća?",
+        "odgovor": "Plaćate pri dostavi, gotovinom ili prenosom na račun. Bez avansa, preuzimanje i dostava se ne naplaćuju."
+      },
+      {
+        "pitanje": "Da li se skidaju sve fleke?",
+        "odgovor": "Većina fleka (hrana, piće, blato, ljubimci) skida se u potpunosti. Stare fleke od boje, mastila ili hemikalija ne garantujemo, pre pranja vam iskreno kažemo šta je moguće."
+      },
+      {
+        "pitanje": "Šta ako je tepih od vune ili svile?",
+        "odgovor": "Osetljiva vlakna peremo po posebnom programu, sa blažim sredstvima i kontrolisanim sušenjem u komori. Takve tepihe uvek pregledamo pre pranja i cenu potvrđujemo unapred."
+      }
+    ]
+  },
+  "navigacija": [
+    {
+      "naziv": "Početna",
+      "sidro": "#pocetak"
+    },
+    {
+      "naziv": "O nama",
+      "sidro": "#o-nama"
+    },
+    {
+      "naziv": "Usluge",
+      "sidro": "#usluge"
+    },
+    {
+      "naziv": "Cene",
+      "sidro": "#cenovnik"
+    },
+    {
+      "naziv": "Kontakt",
+      "sidro": "#zakazi"
+    }
+  ],
+  "footer": {
+    "naslov": "TEPIH SERVIS SERVIS ALFA",
+    "opis": "Lokalni servis za dubinsko pranje tepiha, staza i itisona sa sušenjem u komori. Besplatno preuzimanje i dostava.",
+    "podrucje": "Područje rada: Beograd i okolina",
+    "naslovKontakt": "Kontakt",
+    "dugme": "Zakažite odmah",
+    "potpis": "2026 Tepih Servis Alfa, Primer ulica 1, 11000 Beograd | izrada sajta SM Design",
+    "linkovi": [
+      {
+        "naziv": "Politika privatnosti",
+        "putanja": "/politika-privatnosti"
+      }
+    ]
+  }
+}
