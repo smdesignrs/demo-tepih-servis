@@ -14,6 +14,26 @@ adresu `https://demo-tepih-servis.pages.dev`. Ta adresa je vec upisana u
 `index.html`, `hvala.html`, `404.html`, `politika-privatnosti.html` i u
 `sadrzaj/podaci.json`.
 
+## Putanje su relativne, namerno
+
+Sve putanje do CSS-a, JS-a, slika i fontova su **relativne** (`css/style.css`),
+a ne apsolutne od korena domena (`/css/style.css`). Isto vazi i za `url()` u
+CSS-u i za linkove medju stranama, koji nose `.html`.
+
+Razlog: demo mora da radi na tri mesta, a apsolutne putanje rade samo na prvom.
+- Cloudflare Pages ili bilo koji koren domena
+- GitHub Pages, gde sajt sedi u podfolderu `korisnik.github.io/demo-tepih-servis/`
+- otvoren duplim klikom iz foldera, bez servera
+
+Provereno u sva tri slucaja. Jedina razlika kod duplog klika: pisma se ne
+ucitavaju, jer pretrazivac ne dozvoljava ucitavanje fontova sa `file://`, pa
+tekst pada na sistemsko pismo. Sve ostalo radi.
+
+**Na sajtu za klijenta se vraca na apsolutne putanje** (`/css/style.css`) i
+adrese bez nastavka (`/politika-privatnosti`), jer taj sajt uvek sedi na korenu
+svog domena, a Cloudflare Pages sam skida `.html`. Tako je i u skilu
+`sajt-standard`.
+
 ## Podizanje
 
 1. Nov privatan repo na GitHubu, ime `demo-tepih-servis`
@@ -80,7 +100,8 @@ Nema `sitemap.xml`, jer nijedna strana ne treba da ude u pretragu.
 7. Vracaju se `functions/`, `baza/`, Turnstile, Resend i Access, pa se forma i
    panel spajaju sa bazom
 8. `sitemap.xml` se pravi, `noindex` se skida, `robots.txt` dobija Sitemap red
-9. Sve ostalo po skilu `sajt-standard`, ukljucujuci QA liste
+9. Putanje se vracaju na apsolutne, linkovi na adrese bez `.html`
+10. Sve ostalo po skilu `sajt-standard`, ukljucujuci QA liste
 
 ## Paketi
 

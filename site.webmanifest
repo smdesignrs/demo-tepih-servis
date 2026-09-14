@@ -2,16 +2,16 @@
   "name": "Tepih Servis Alfa",
   "short_name": "Tepih Servis Alfa",
   "description": "Dubinsko pranje i sušenje tepiha u komori, Beograd.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#123A6B",
   "lang": "sr",
   "icons": [
-    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "/slike/logo/ikonica-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/slike/logo/ikonica-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/slike/logo/ikonica-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "slike/logo/ikonica-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "slike/logo/ikonica-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "slike/logo/ikonica-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
