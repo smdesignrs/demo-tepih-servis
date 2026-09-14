@@ -1,0 +1,43 @@
+# Zaglavlja koja Cloudflare Pages dodaje odgovorima.
+# DEMO: ceo sajt je van pretrage. Crawleri smeju da ga procitaju (zato robots.txt
+# ne zabranjuje), ali ga zbog X-Robots-Tag ne smeju indeksirati. Obrnuto ne radi:
+# Disallow u robots.txt bi sprecio da uopste vide noindex.
+
+/*
+  X-Robots-Tag: noindex, nofollow
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; worker-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+
+# Sve sto ima verziju u adresi (?v=) sme godinu dana u kes.
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+/fontovi/*
+  Cache-Control: public, max-age=31536000, immutable
+/slike/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML se uvek proverava. Pages servira strane i bez nastavka .html,
+# a pravilo /*.html te adrese NE hvata, pa se navode i ovako.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/politika-privatnosti
+  Cache-Control: public, max-age=0, must-revalidate
+/hvala
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Na pravom sajtu panel nosi podatke klijenata i zakljucan je Cloudflare
+# Access-om. U demou je namerno otvoren, da se vidi kako izgleda, ali su
+# zahtevi izmisljeni i nista se ne cuva.
+/admin
+  Cache-Control: no-store, private
+/admin/*
+  Cache-Control: no-store, private

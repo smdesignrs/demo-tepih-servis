@@ -1,0 +1,18 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+.env
+.env.*
+*.log
+.wrangler/
+
+# Nekompresovane slike, ostaju samo lokalno.
+originali/
+
+# Lokalni pregled, jedan fajl sa svime ugradjenim, oko 6MB.
+# Ne sme u repozitorijum jer bi Cloudflare Pages poceo da ga servira.
+PREGLED-sajta*.html
+
+# Izvoz iz Claude Design-a, izvor dizajna, ne deo sajta.
+*.dc.html

@@ -1,0 +1,8 @@
+# Preusmeravanja. Sva su trajna (301), bez lanaca.
+# Kad se menja postojeci sajt, ovde se popisuju sve stare adrese.
+#
+# Primer:
+# /stara-strana   /#usluge   301
+
+/index.html   /   301
+

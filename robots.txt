@@ -1,0 +1,6 @@
+# DEMO sajt. Namerno nije zabranjeno citanje, jer bi zabrana sprecila da
+# crawler uopste vidi zaglavlje X-Robots-Tag: noindex iz _headers.
+# Nema sitemap.xml, jer nijedna strana ne treba da ude u pretragu.
+
+User-agent: *
+Allow: /
